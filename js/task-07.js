@@ -2,7 +2,9 @@ document.querySelector("body").style.backgroundColor = "#eaf1fad0";
 const inputRangeEl = document.getElementById("font-size-control");
 const textEl = document.getElementById("text");
 
-const fontSizeControl = ({ currentTarget }) =>
-  (textEl.style.fontSize = `${currentTarget.value}px`);
+const fontSizeControl = () =>
+  (textEl.style.fontSize = `${inputRangeEl.value}px`);
+
+fontSizeControl();
 
 inputRangeEl.addEventListener("input", fontSizeControl);

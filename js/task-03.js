@@ -18,5 +18,6 @@ const gallery = document.querySelector(".gallery");
 const createGallery = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width = "300" height = "auto"></li>`;
 
+gallery.classList.add("ul");
 const galleryMarkup = images.map(createGallery).join("");
 gallery.insertAdjacentHTML("beforeend", galleryMarkup);
